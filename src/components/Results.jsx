@@ -38,9 +38,9 @@ export const Results = () => {
         case '/images':
             return (
                 <div className="flex flex-wrap justify-center items-center">
-                  {results?.items?.map(({ image, title, link }, index) => (
-                    <a href={link} target="_blank" key={index} rel="noreferrer" className="sm:p-3 p-5">
-                      <img src={image} alt={title} loading="lazy" />
+                  {results?.items?.map(({ title, originalImageUrl }, index) => (
+                    <a href={originalImageUrl} target="_blank" key={index} rel="noreferrer" className="sm:p-3 p-5">
+                      <img src={originalImageUrl} alt={title} loading="lazy" />
                       <p className="sm:w-36 w-36 break-words text-sm mt-2">{title}</p>
                     </a>
                   ))}
