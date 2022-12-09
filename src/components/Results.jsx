@@ -12,7 +12,7 @@ export const Results = () => {
     useEffect(() => {
         if (searchTerm !== '') {
             if (location.pathname == '/images') {
-              getResults(`imagesearch?query=${searchTerm}&num=10`);
+              getResults(`/imagesearch?query=${searchTerm}&num=10`);
             } else {
               getResults(`${location.pathname}?query=${searchTerm}&num=10`);
             }
